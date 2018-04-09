@@ -93,8 +93,7 @@ class BodyAcceleration(Acceleration):
                                    attitude.psi)
 
     def __repr__(self):
-        rv = (f"u_dot: {self.u_dot:.2f} m/s², v_dot: {self.v_dot:.2f} m/s², "
-              f"w_dot: {self.u_dot:.2f} m/s²")
+        rv = ( "u_dot: {:.2f} m/s², v_dot: {:.2f} m/s², w_dot: {:.2f} m/s²".format(self.u_dot, self.v_dot, self.w_dot))
         return rv
 
 
@@ -112,7 +111,6 @@ class NEDAcceleration(Acceleration):
                                     attitude.psi)
 
     def __repr__(self):
-        rv = (f"V_north_dot: {self.v_north_dot:.2f} m/s², "
-              f"V_east_dot: {self.v_east_dot:.2f} m/s², "
-              f"V_down_dot: {self.v_down_dot:.2f} m/s²")
+        args = [self.v_north_dot, self.v_east_dot, self.v_down_dot]
+        rv = ("V_north_dot: {:.2f} m/s², V_east_dot: {:.2f} m/s², V_down_dot: {:.2f} m/s²".format(*args))
         return rv

@@ -167,7 +167,7 @@ class DynamicSystem:
                         **self._options)
 
         if sol.status == -1:
-            raise RuntimeError(f"Integration did not converge at t={t_ini}")
+            raise RuntimeError("Integration did not converge at t={}".format(t_init))
 
         self._time = sol.t[-1]
         self._state_vector = sol.y[:, -1]

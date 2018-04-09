@@ -134,8 +134,8 @@ class EarthPosition(Position):
         self._earth_coordinates[:] = value
 
     def __repr__(self):
-        rv = (f"x_e: {self.x_earth:.2f} m, y_e: {self.y_earth:.2f} m, "
-              f"z_e: {self.z_earth:.2f} m")
+        args = [ sefl.x_earth, self.y_earth, self.z_earth ]
+        rv = ("x_e: {:.2f} m, y_e: {} m, z_e: {:.2f} m".format(*args))
         return rv
 
 

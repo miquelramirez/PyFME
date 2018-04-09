@@ -89,9 +89,8 @@ class BodyAngularVelocity(AngularVelocity):
         self._euler_ang_rate = np.zeros(3)  # rad/s
 
     def __repr__(self):
-        return (f"P: {self.p:.2f} rad/s, "
-                f"Q: {self.q:.2f} rad/s, "
-                f"R: {self.r:.2f} rad/s")
+        args = [self.p, self.q, self.r]
+        return ("P: {:.2f} rad/s, Q: {:.2f} rad/s, R: {:.2f} rad/s".format(*args))
 
 
 class EulerAngularRates(AngularVelocity):

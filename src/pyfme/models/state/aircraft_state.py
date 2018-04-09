@@ -44,12 +44,12 @@ class AircraftState:
 
     def __repr__(self):
         rv = (
-            "Aircraft State \n"
-            f"{self.position} \n"
-            f"{self.attitude} \n"
-            f"{self.velocity} \n"
-            f"{self.angular_vel} \n"
-            f"{self.acceleration} \n"
-            f"{self.angular_accel} \n"
+            "Aircraft State \n",
+            "{} \n".format(self.position),
+            "{} \n".format(self.attitude),
+            "{} \n".format(self.velocity),
+            "{} \n".format(self.angular_vel),
+            "{} \n".format(self.acceleration),
+            "{} \n".format(self.angular_accel),
         )
-        return rv
+        return "".join(rv)
